@@ -43,7 +43,7 @@ func (app *Application) cookieClient(w http.ResponseWriter, r *http.Request, nam
 	}
 
 	if cookie.Secure == true {
-		if name != "./src/storyAbout.html" {
+		if name != "./static/storyAbout.html" {
 			app.render(w, r, name)
 		}
 	}

@@ -15,7 +15,7 @@ func (app Application) Router() *http.ServeMux {
 	mux.HandleFunc("./src/contacts", app.ourContacts)
 	log.Println("Запуск веб-сервера на http://127.0.0.1:4001")
 
-	fileServer := http.FileServer(http.Dir("./src"))
+	fileServer := http.FileServer(http.Dir("./static"))
 	mux.Handle("/static", http.NotFoundHandler())
 	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
 
