@@ -5,7 +5,7 @@ services:
     image: postgres:latest
     restart: always
     environment:
-      POSTGRES_PASSWORD: temurchlen
+      POSTGRES_PASSWORD: qwerty
     ports:
       - 5634:5634
 
